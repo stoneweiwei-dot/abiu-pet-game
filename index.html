@@ -49,4 +49,4 @@ function paint(){const en=document.documentElement.lang==='en';button.textConten
 button.addEventListener('click',()=>{if(state.on)stop();else start()});selector.addEventListener('change',()=>{state.track=selector.value;save();if(state.on){nextTime=audio.currentTime+.07;step=0}paint()});volume.addEventListener('input',()=>{state.vol=Number(volume.value)/100;if(audio&&master)master.gain.setTargetAtTime((state.on?state.vol:0)*.26,audio.currentTime,.03);save()});window.addEventListener('abiu:language',paint);document.addEventListener('visibilitychange',()=>{if(document.hidden&&state.on)stop()});window.addEventListener('pagehide',()=>{if(state.on)stop()});paint();
 })();
 
-</script></body></html>
+</script><script src="./abiu-motion.js?v=2" defer></script></body></html>
